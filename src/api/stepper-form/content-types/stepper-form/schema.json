@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stepper_forms",
+  "info": {
+    "singularName": "stepper-form",
+    "pluralName": "stepper-forms",
+    "displayName": "stepper-form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Personal Details",
+        "Payment Details"
+      ],
+      "default": "Personal Details",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2,
+      "required": true
+    },
+    "fields": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "One Year",
+        "Two Year",
+        "Three Year",
+        "Five Year"
+      ],
+      "default": "One Year",
+      "required": true
+    },
+    "totalPrice": {
+      "type": "integer",
+      "default": 0
+    },
+    "packageDescription": {
+      "type": "json"
+    },
+    "yearlyPrice": {
+      "type": "integer",
+      "default": 0
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "application",
+        "renewal"
+      ],
+      "required": true,
+      "default": "application"
+    }
+  }
+}
